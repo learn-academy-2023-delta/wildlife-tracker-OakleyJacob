@@ -5,7 +5,9 @@ class AnimalsController < ApplicationController
     end
     def show
         animal = Animal.find(params[:id])
-        render json: animal
+        sightings = Sighting.where(animal_id:params[:id])
+        render json: {'animal': animal, 'sightings':sightings} 
+        render json:
     end
     def create
         animal = Animal.create(animal_params)
