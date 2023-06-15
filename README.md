@@ -50,7 +50,7 @@ Acceptance Criteria
 
 <!-- Can see one animal with all its associated sightings -->
 Hint: Checkout this example on how to include associated records
-Can see all the all sightings during a given time period
+<!-- Can see all the all sightings during a given time period
 Hint: Your controller can use a range to look like this:
 class SightingsController < ApplicationController
   def index
@@ -60,7 +60,7 @@ class SightingsController < ApplicationController
 end
 Hint: Be sure to add the start_date and end_date to what is permitted in your strong parameters method
 Hint: Utilize the params section in Postman to ease the developer experience
-Hint: Routes with params
+Hint: Routes with params -->
 Stretch Challenges
 Story 4: In order to see the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.
 
@@ -69,10 +69,10 @@ Branch: animal-sightings-specs
 Acceptance Criteria
 Validations will require specs in spec/models and the controller methods will require specs in spec/requests.
 
-Can see validation errors if an animal doesn't include a common name and scientific binomial
-Can see validation errors if a sighting doesn't include latitude, longitude, or a date
+<!-- Can see validation errors if an animal doesn't include a common name and scientific binomial -->
+<!-- Can see validation errors if a sighting doesn't include latitude, longitude, or a date
 Can see a validation error if an animal's common name exactly matches the scientific binomial
-Can see a validation error if the animal's common name and scientific binomial are not unique
+Can see a validation error if the animal's common name and scientific binomial are not unique -->
 Can see a status code of 422 when a post request can not be completed because of validation errors
 Hint: Handling Errors in an API Application the Rails Way
 Story 5: In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the same time.

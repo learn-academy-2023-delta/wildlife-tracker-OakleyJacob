@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+
     def index
         animals = Animal.all
         render json: animals
@@ -10,7 +11,8 @@ class AnimalsController < ApplicationController
         render json:
     end
     def create
-        animal = Animal.create(animal_params)
+        p 'we made it into create'
+        animal = Animal.create!(animal_params)
         if animal.valid?
             render json: animal
 
@@ -22,7 +24,7 @@ class AnimalsController < ApplicationController
 
     def update
         animal = Animal.find(params[:id])
-        if animal.update(animal_params)
+        if animal.update!(animal_params)
             render json: animal
         else
             render json: animal.errors
