@@ -28,6 +28,14 @@ Branch: sighting-crud-actions
 
 Acceptance Criteria
 
+rails g resource Sighting animal_id:integer latitude:string longitude:string date:datetime
+
+Animal.first.sightings.create(latitude:"N 35° 43min 48.8064sec", longitude:'W 100° 36min 11.8512sec', date:DateTime.parse("2023-06-15 12:30 PM"))
+
+
+
+
+
 Create a resource for animal sightings with the following information: latitude, longitude, date
 Hint: An animal has_many sightings (rails g resource Sighting animal_id:integer ...)
 Hint: Date is written in Active Record as yyyy-mm-dd (“2022-07-28")
